@@ -1,11 +1,11 @@
 ```mermaid
 classDiagram
-  class Habitacion{
+  class Habitación{
         -int numero
         -string tipo
         -bool ocupada
-        +Habitacion(int num, string t)
-        +~Habitacion()
+        +Habitación(int num, string t)
+        +~Habitación()
         +int getNumero() 
         +string getTipo() 
         +bool estaOcupada() 
@@ -21,15 +21,15 @@ classDiagram
     }
     class Hotel{
         -string nombre;
-        -vector<Habitacion> habitaciones
+        -vector<Habitación> habitaciones
         -vector<Cliente*> clientes
         +Hotel(string n)
         +~Hotel()
-        +void agregarHabitacion(int numero, string tipo)
+        +void agregarHabitación(int numero, string tipo)
         +void registrarCliente(Cliente* cliente)
         +void mostrarInfo()
     }
 
     Cliente --o Hotel
-    Habitacion --* Hotel
+    Habitación --* Hotel
   
